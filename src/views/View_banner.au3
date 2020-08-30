@@ -96,11 +96,15 @@ Func _GUI_HandleEvents_View_Banner($msg)
 
 	  ;Trigger for click on BtnAbout, takes user to About view
 	  Case $banner_BtnAbout
-		 ;_GUI_ShowHide_View_About($GUI_SHOW)
+		 _GUI_ShowHide_View_About($GUI_SHOW)
 
 	  ;Trigger for click on BtnSupport, takes user to support view
+	  Case $banner_BtnSupport
+		 _GUI_ShowHide_View_Support($GUI_SHOW)
+
+	  ;Trigger for click on BtnConnexion, takes user to support view
 	  Case $banner_BtnConnect
-		 ;_GUI_ShowHide_View_Connexion($GUI_SHOW)
+		 _GUI_ShowHide_View_Connexion($GUI_SHOW)
 
    EndSwitch
 

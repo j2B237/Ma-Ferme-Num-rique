@@ -29,7 +29,7 @@ Main manager of the Home view
 Func _GUI_Init_View_Home()
 
    GUISetFont(20, 800, 0, "Arial Narrow")
-   Global $label_View_Home = GUICtrlCreateLabel(" HOME PAGE ", 550, 250, 200, 50)
+   Global $label_View_Home = GUICtrlCreateLabel(" HOME PAGE ", 550, 120, 200, 50)
    GUICtrlSetColor($label_View_Home, $APP_GUI_TITLE_COLOR)
    GUICtrlSetBkColor($label_View_Home, $GUI_BKCOLOR_TRANSPARENT)
 
@@ -51,7 +51,6 @@ Func _GUI_ShowHide_View_Home($action)
 	  Case $GUI_SHOW
 		 _GUI_Hide_all_View()
 		 GUICtrlSetState($label_View_Home, $GUI_SHOW)
-
 	  Case $GUI_HIDE
 		 GUICtrlSetState($label_View_Home, $GUI_HIDE)
 

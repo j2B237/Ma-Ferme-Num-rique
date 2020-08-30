@@ -19,8 +19,12 @@ entry program. This method is designed to create the graphical user interface
 
 
 #include "./views/View_banner.au3"
-#include "./views/View_home.au3"
 ;#include "./views/View_navbar.au3"
+#include "./views/View_home.au3"
+#include "./views/View_About.au3"
+#include "./views/View_Support.au3"
+#include "./views/View_Connexion.au3"
+
 ;#include "./views/View_footer.au3"
 
 Func App_Start()
@@ -31,6 +35,9 @@ Func App_Start()
    _GUI_Init_View_Home()
 
    ;By Default all elements of those views are hidden
+   _GUI_Init_View_About()
+   _GUI_Init_View_Support()
+   _GUI_Init_View_Connexion()
 
    ; Set configuration application : icon, background color
 	_GUI_Configuration()
@@ -69,6 +76,10 @@ Func _GUI_HandleEvents()
 
 	 _GUI_HandleEvents_View_Banner($msg)
 	 _GUI_HandleEvents_View_Home($msg)
+	 _GUI_HandleEvents_View_About($msg)
+	 _GUI_HandleEvents_View_Support($msg)
+	 _GUI_HandleEvents_View_Connexion($msg)
+
    WEnd
 EndFunc
 
@@ -93,4 +104,7 @@ Func _GUI_Configuration()
 Func _GUI_Hide_all_view()
    ;Views below are always Hidden when one view is displaying
 	_GUI_ShowHide_View_Home($GUI_HIDE)
+	_GUI_ShowHide_View_About($GUI_HIDE)
+	_GUI_ShowHide_View_Support($GUI_HIDE)
+	_GUI_ShowHide_View_Connexion($GUI_HIDE)
 EndFunc
